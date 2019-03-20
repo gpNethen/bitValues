@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- /export/home/cs200/cs200139/Documents/labs/lab5/bitvalues.html    -->
+<!-- Nathan Reichert                                                   -->
+<!-- Section 4                                                         -->
+<!-- Created 9/26/2013                                                 -->
+<!-- Last Edited 9/26/2013                                             -->
+<!-- The purpose of this page is to demonstrate usefulness             -->
+<!-- Of user defined functions to perform math functions               -->
+<!-- ================================================================= -->
+<html>
+    <head>
+        <title>Bit/Value Calculator</title>
+        <script type="text/javascript">
+            function ValuesPerBit()
+            // Assumes: Input box declaring the number of bits to calculate the number of values they can represent
+            // Results: Displays appropriate number of values for the amount of bits from the input box
+            {
+            bits=parseFloat(document.getElementById('bitBox').value);
+                nBits=Math.pow(2,bits);
+                document.getElementById('outputDiv').innerHTML=
+                '<p>With '+ bits + ' bits, you can represent ' + nBits + ' values.</p>';
+            }
+         </script>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <h2>Bit/Value Calculator</h2>
+        </div>
+        <p>
+        <input type="text" size="13" value="1" id="bitBox">
+        <input type="button" value="Click to Get Values"
+            onclick="ValuesPerBit();">
+        </p>
+    <hr>
+        <div id="outputDiv"></div>
+    </body>
+</html
